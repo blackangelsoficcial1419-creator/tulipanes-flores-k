@@ -1,4 +1,3 @@
-# tulipanes-flores-k
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,6 +6,7 @@
     <title>Tulipanes para mi Kathe</title>
     
     <style>
+        /* AJUSTES GLOBALES Y CENTRADO FLEXBOX */
         body {
             margin: 0;
             padding: 0;
@@ -18,28 +18,23 @@
             align-items: center;
             overflow: hidden;
             font-family: sans-serif;
-            color: #ffffff;
-        }
-        
-        .garden {
-            position: relative;
-            display: flex;
-            gap: 60px;
         }
 
+        /* CONTENEDOR DE TEXTO */
         .love-text-container {
             position: relative;
-            z-index: 10;
+            z-index: 10; 
             text-align: center;
-            transform: translateY(15vh); 
-            margin-bottom: -15vh;
+            margin-bottom: 20px; 
         }
 
         .love-text {
-            font-size: 5vw;
+            font-size: 5vw; 
             font-weight: bold;
             color: #c77dff;
-            line-height: 1.1; /* Reduce el espacio entre líneas */
+            line-height: 1.25; 
+            margin-bottom: 10px; 
+            display: block; 
             text-shadow:
                 0 0 10px #c77dff,
                 0 0 20px #d0a3ff,
@@ -48,8 +43,15 @@
             animation: glow 2s ease-in-out infinite alternate;
         }
 
-        /* === CÓDIGO DE TULIPANES Y ANIMACIONES === */
+        /* CONTENEDOR DE FLORES */
+        .garden {
+            position: relative;
+            display: flex;
+            gap: 60px;
+            margin-top: 20px; 
+        }
 
+        /* Tallo */
         .stem {
             width: 6px;
             height: 180px;
@@ -61,10 +63,10 @@
             align-items: flex-end;
         }
 
+        /* Flor (tulipán) */
         .tulip {
             position: absolute;
-            /* La posición de la flor ahora es relativa al tallo */
-            bottom: 170px; 
+            bottom: 170px;
             width: 60px;
             height: 70px;
             background: linear-gradient(to top, #ffffff 5%, #c77dff 60%, #7b2cbf 100%);
@@ -75,6 +77,7 @@
             animation: bloom 4s ease-in-out infinite alternate;
         }
 
+        /* Hojas */
         .leaf {
             position: absolute;
             bottom: 40px;
@@ -123,13 +126,15 @@
     </style>
 </head>
 <body>
+    
     <div class="love-text-container">
-        <div class="love-text">Para</div>
-        <div class="love-text">mi</div>
-        <div class="love-text">Kathe</div>
+        <span class="love-text">Para</span>
+        <span class="love-text">mi</span>
+        <span class="love-text">Kathe</span>
     </div>
     
     <div class="garden">
+        
         <div class="stem">
             <div class="tulip"></div>
             <div class="leaf left"></div>
@@ -140,7 +145,7 @@
             <div class="tulip"></div>
             <div class="leaf left"></div>
             <div class="leaf right"></div>
-            </div>
+        </div>
 
         <div class="stem">
             <div class="tulip"></div>
